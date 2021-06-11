@@ -1,0 +1,95 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+.reactPlayer{
+  max-width: 300px;
+  max-height: 200px;
+  border-radius: 5px;
+  width:300px !important;
+  height:200px !important;
+}
+@keyframes slideIn {
+  100% {
+    left: 0;
+  }
+}
+.drag-n-drop {
+  padding: 0.5rem;
+  display: flex;  
+  min-height: 100vh;
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+}
+.dnd-group {
+  animation: flexanimation 1s ease-out 1s infinite alternate backwards;
+  background-color: #49505e;
+  border-radius: 5px;
+  padding: 0.5rem;  
+  box-sizing: border-box;
+  width: 50%;
+  max-height:50vh;
+  min-height: 50%;
+  display: flex;
+  flex-direction: column;
+  left: -100%;
+  justify-content: flex-end;
+  overflow: hidden;
+  align-items: baseline;
+  animation: slideIn 1s forwards;
+}
+.dnd-group:nth-child(even) {
+  align-items: flex-end;
+}
+@media (max-width: 480px) {
+  .dnd-group {
+  
+  }
+}
+.dnd-item {
+  max-width: 300px;
+  width: 300px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 200px;
+  min-height: 150px;  
+  border-radius: 5px;
+  color: #282c34;
+  font-weight: bold;
+}
+
+
+.group-title {
+  text-align: left;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+.current {
+  background-color: #282c34;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
